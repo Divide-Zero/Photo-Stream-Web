@@ -1,3 +1,64 @@
 .HomePanel {
-    
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+
+    background: #222;
+}
+
+.HomePanel
+.frame {
+    /* fullscreen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    /* Background Position */
+    background-repeat: no-repeat;
+    background-position:  center;
+    background-attachment: fixed;
+
+    /* Background Sizing */
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+.HomePanel
+.frame.current {
+    z-index: 2;
+}
+
+.HomePanel
+.watermark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+
+    font-size: 3em;
+    color: #FFF;
+    opacity: 0.5;
+}
+
+
+/* ---- Transition ---- */
+
+/* always present */
+.slide-transition {
+    transition: margin 5s ease-in-out;
+    margin-left: 0;
+}
+
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.slide-enter {
+    margin-left: 100%;
+}
+.slide-leave {
+    margin-left: -100%;
 }

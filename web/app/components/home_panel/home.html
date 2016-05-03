@@ -1,3 +1,12 @@
 <div class="HomePanel">
-    hello
+    <div class="frame"
+         v-for="(index, slide) in slides"
+         :class="{ current: is_current_slide(index) }"
+         :style="{ 'background-image': 'url('+slide.url+')' }"
+         v-show="is_current_slide(index)"
+         transition="slide">
+    </div>
+    <div class="watermark" @click="next_slide">
+        <i class="fa fa-fw fa-twitter"></i>
+    </div>
 </div>
